@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loxxler</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome für Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            twitch: '#9146FF',
+            discord: '#5865F2',
+            tiktok: '#000000',
+            onlyfans: '#00AFF0',
+            partner: '#38B2AC',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #22543d 0%, #047857 100%);
+    }
+    
+    .btn-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .btn-hover:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .glow-effect {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px -10px rgba(255, 255, 255, 0.5);
+      }
+      to {
+        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-900 min-h-screen bg-gray-900">
+  <!-- Hero Section with Animated Background -->
+  <div class="hero-gradient relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col items-center justify-center">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden opacity-20">
+      <div class="absolute top-1/4 left-1/4 w-16 h-16 bg-green-500 rounded-full animate-pulse-slow"></div>
+      <div class="absolute top-3/4 left-2/3 w-24 h-24 bg-emerald-500 rounded-full animate-pulse-slow" style="animation-delay: 1s;"></div>
+      <div class="absolute top-1/2 left-1/6 w-20 h-20 bg-teal-500 rounded-full animate-pulse-slow" style="animation-delay: 2s;"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-3xl mx-auto text-center">
+      <!-- Logo with Glow Effect -->
+      <div class="flex flex-col items-center mb-12">
+        <div class="mb-6 glow-effect rounded-full p-1 bg-gradient-to-r from-green-400 to-emerald-600">
+          <img src="/api/placeholder/300/300" alt="Loxxler Logo" class="w-40 h-40 rounded-full border-4 border-gray-900 floating">
+        </div>
+        <div class="animate__animated animate__fadeIn">
+          <h1 class="text-5xl font-extrabold text-white mb-2 tracking-tight">LOXXLER</h1>
+          <p class="text-xl text-green-200 max-w-xl">Gaming | Entertainment | Content Creator</p>
+        </div>
+      </div>
+      
+      <!-- Social Media Buttons with Enhanced Styling -->
+      <div class="w-full max-w-md mx-auto space-y-4 animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+        <a href="https://www.twitch.tv/loxxler" class="flex items-center justify-between px-6 py-4 bg-twitch text-white rounded-xl shadow-lg btn-hover group w-full">
+          <span class="flex items-center">
+            <i class="fab fa-twitch text-2xl mr-3"></i>
+            <span class="font-medium">Twitch</span>
+          </span>
+          <span class="bg-white bg-opacity-30 rounded-full w-8 h-8 flex items-center justify-center transform group-hover:rotate-45 transition-transform">
+            <i class="fas fa-arrow-right text-white"></i>
+          </span>
+        </a>
+        
+        <a href="https://discord.gg/loxxler" class="flex items-center justify-between px-6 py-4 bg-discord text-white rounded-xl shadow-lg btn-hover group w-full">
+          <span class="flex items-center">
+            <i class="fab fa-discord text-2xl mr-3"></i>
+            <span class="font-medium">Discord</span>
+          </span>
+          <span class="bg-white bg-opacity-30 rounded-full w-8 h-8 flex items-center justify-center transform group-hover:rotate-45 transition-transform">
+            <i class="fas fa-arrow-right text-white"></i>
+          </span>
+        </a>
+        
+        <a href="https://www.tiktok.com/@loxxler" class="flex items-center justify-between px-6 py-4 bg-tiktok text-white rounded-xl shadow-lg btn-hover group w-full">
+          <span class="flex items-center">
+            <i class="fab fa-tiktok text-2xl mr-3"></i>
+            <span class="font-medium">TikTok</span>
+          </span>
+          <span class="bg-white bg-opacity-30 rounded-full w-8 h-8 flex items-center justify-center transform group-hover:rotate-45 transition-transform">
+            <i class="fas fa-arrow-right text-white"></i>
+          </span>
+        </a>
+        
+        <a href="https://only-fans.uk/loxxler" class="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-green-600 to-green-800 text-white rounded-xl shadow-lg btn-hover group w-full">
+          <span class="flex items-center">
+            <i class="fas fa-crown text-2xl mr-3"></i>
+            <span class="font-medium">OnlyFans</span>
+          </span>
+          <span class="bg-white bg-opacity-30 rounded-full w-8 h-8 flex items-center justify-center transform group-hover:rotate-45 transition-transform">
+            <i class="fas fa-arrow-right text-white"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <!-- Partner Section with Card Design -->
+  <div class="py-16 bg-gray-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-2">Partner & Sponsoren</h2>
+        <div class="h-1 w-20 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto rounded-full"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center">
+        <a href="https://otp.cx" class="bg-gradient-to-br from-green-500 to-green-700 rounded-xl shadow-xl p-6 transform transition-all duration-300 hover:scale-105">
+          <div class="flex items-center mb-4">
+            <div class="bg-white rounded-full p-3 mr-4">
+              <i class="fas fa-link text-green-600 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">OnThePixel.net</h3>
+          </div>
+          <p class="text-gray-200 mb-4">Offizieller Partner für Gaming-Events und Community-Aktivitäten</p>
+          <div class="flex justify-end">
+            <span class="inline-flex items-center text-white font-medium">
+              Partner Website besuchen
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </div>
+        </a>
+        
+        <a href="https://icebook.de" class="bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-xl shadow-xl p-6 transform transition-all duration-300 hover:scale-105">
+          <div class="flex items-center mb-4">
+            <div class="bg-white rounded-full p-3 mr-4">
+              <i class="fas fa-link text-emerald-600 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Icebook</h3>
+          </div>
+          <p class="text-gray-200 mb-4">Streaming Partner und Content Creator</p>
+          <div class="flex justify-end">
+            <span class="inline-flex items-center text-white font-medium">
+              Partner Website besuchen
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Footer with Better Design -->
+  <footer class="bg-gray-900 pt-12 pb-6">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 onthepixel.net. otp.cx is a domain by onthepixel.net</p>
+        <div>
+          <a href="https://onthepixel.net/imprint" class="text-gray-500 hover:text-white text-sm transition">Impressum</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-6 right-6 bg-green-600 text-white rounded-full p-3 shadow-lg opacity-0 invisible transition-all duration-300 transform translate-y-10">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Back to Top Button Functionality
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove('opacity-0', 'invisible', 'translate-y-10');
+        backToTopButton.classList.add('opacity-100', 'visible', 'translate-y-0');
+      } else {
+        backToTopButton.classList.add('opacity-0', 'invisible', 'translate-y-10');
+        backToTopButton.classList.remove('opacity-100', 'visible', 'translate-y-0');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
