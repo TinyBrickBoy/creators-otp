@@ -143,32 +143,6 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0, 0, 0, 0.1);
 }
 
-.social-icon {
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: scale(1.2) rotate(10deg);
-}
-
-.logo-container {
-  position: relative;
-}
-
-.logo-container::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #3b82f6);
-  border-radius: 50%;
-  animation: gradient 4s linear infinite;
-  z-index: -1;
-  opacity: 0.3;
-}
-
 .text-glow {
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
@@ -198,7 +172,7 @@ body {
   <div class="hero-bg relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
     <!-- Logo Section -->
     <div class="text-center mb-16 animate-slide-up">
-      <div class="logo-container inline-block mb-8">
+      <div class="inline-block mb-8">
         <img src="/pictures/icebook.png" alt="Icebook Logo" class="w-32 h-32 rounded-full animate-float">
       </div>
       <h1 class="text-6xl md:text-7xl font-black text-white mb-4 text-glow tracking-tight">
@@ -213,9 +187,6 @@ body {
   <!-- Twitch -->
   <a href="https://twitch.tv/icebook_" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
     <div class="flex items-center">
-      <div class="bg-twitch rounded-xl p-3 mr-4 social-icon">
-        <i class="fab fa-twitch text-white text-xl"></i>
-      </div>
       <div>
         <h3 class="text-white font-semibold text-lg">Twitch</h3>
         <p class="text-gray-300 text-sm">Live Gaming Streams</p>
@@ -229,9 +200,6 @@ body {
   <!-- Discord -->
   <a href="https://discord.gg/hS7dXYuYAZ" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
     <div class="flex items-center">
-      <div class="bg-discord rounded-xl p-3 mr-4 social-icon">
-        <i class="fab fa-discord text-white text-xl"></i>
-      </div>
       <div>
         <h3 class="text-white font-semibold text-lg">Discord</h3>
         <p class="text-gray-300 text-sm">Community Chat</p>
@@ -245,9 +213,6 @@ body {
   <!-- TikTok -->
   <a href="https://www.tiktok.com/@icebook6" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
     <div class="flex items-center">
-      <div class="bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl p-3 mr-4 social-icon">
-        <i class="fab fa-tiktok text-white text-xl"></i>
-      </div>
       <div>
         <h3 class="text-white font-semibold text-lg">TikTok</h3>
         <p class="text-gray-300 text-sm">Gaming Clips</p>
@@ -261,9 +226,6 @@ body {
   <!-- OnlyFans -->
   <a href="https://only-fans.uk/icebook" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
     <div class="flex items-center">
-      <div class="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl p-3 mr-4 social-icon">
-        <i class="fas fa-crown text-white text-xl"></i>
-      </div>
       <div>
         <h3 class="text-white font-semibold text-lg">OnlyFans</h3>
         <p class="text-gray-300 text-sm">Exclusive Content</p>
