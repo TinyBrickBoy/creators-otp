@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -28,147 +27,143 @@
   </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
-```
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
-}
-
-.hero-bg {
-  background: linear-gradient(-45deg, #0f0f23, #1a1a2e, #16213e, #0f3460);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  33% { transform: translateY(-10px) rotate(-2deg); }
-  66% { transform: translateY(5px) rotate(1deg); }
-}
-
-@keyframes pulseGlow {
-  0%, 100% { 
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.1);
-  }
-  50% { 
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.5), 0 0 90px rgba(59, 130, 246, 0.3);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.particle {
-  position: absolute;
-  background: white;
-  border-radius: 50%;
-  pointer-events: none;
-  animation: particle-float 8s linear infinite;
-  opacity: 0.1;
-}
-
-@keyframes particle-float {
-  0% {
-    transform: translateY(100vh) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.1;
-  }
-  90% {
-    opacity: 0.1;
-  }
-  100% {
-    transform: translateY(-100px) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-.btn-glow {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.btn-glow::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.btn-glow:hover::before {
-  left: 100%;
-}
-
-.btn-glow:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0, 0, 0, 0.1);
-}
-
-.text-glow {
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
-.partner-card {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.4s ease;
-}
-
-.partner-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
-  box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
-}
-```
-
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .hero-bg {
+      background: linear-gradient(-45deg, #0f0f23, #1a1a2e, #16213e, #0f3460);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-10px) rotate(-2deg); }
+      66% { transform: translateY(5px) rotate(1deg); }
+    }
+    
+    @keyframes pulseGlow {
+      0%, 100% { 
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.1);
+      }
+      50% { 
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.5), 0 0 90px rgba(59, 130, 246, 0.3);
+      }
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .particle {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: particle-float 8s linear infinite;
+      opacity: 0.1;
+    }
+    
+    @keyframes particle-float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.1;
+      }
+      90% {
+        opacity: 0.1;
+      }
+      100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    
+    .btn-glow {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .btn-glow::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+    
+    .btn-glow:hover::before {
+      left: 100%;
+    }
+    
+    .btn-glow:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .text-glow {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    
+    .partner-card {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.4s ease;
+    }
+    
+    .partner-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
+      box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
+    }
   </style>
 </head>
 <body class="min-h-screen">
   <!-- Particle Background -->
   <div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
-
+  
   <!-- Hero Section -->
-
   <div class="hero-bg relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
     <!-- Logo Section -->
     <div class="text-center mb-16 animate-slide-up">
@@ -180,109 +175,101 @@ body {
       </h1>
       <div class="w-32 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
     </div>
-
-```
-<!-- Social Media Cards -->
-<div class="w-full max-w-lg mx-auto space-y-6 animate-slide-up" style="animation-delay: 0.2s;">
-  <!-- Twitch -->
-  <a href="https://twitch.tv/icebook_" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
-    <div class="flex items-center">
-      <div>
-        <h3 class="text-white font-semibold text-lg">Twitch</h3>
-        <p class="text-gray-300 text-sm">Live Gaming Streams</p>
-      </div>
+    
+    <!-- Social Media Cards -->
+    <div class="w-full max-w-lg mx-auto space-y-6 animate-slide-up" style="animation-delay: 0.2s;">
+      <!-- Twitch -->
+      <a href="https://twitch.tv/icebook_" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
+        <div class="flex items-center">
+          <div>
+            <h3 class="text-white font-semibold text-lg">Twitch</h3>
+            <p class="text-gray-300 text-sm">Live Gaming Streams</p>
+          </div>
+        </div>
+        <div class="bg-white bg-opacity-20 rounded-full w-10 h-10 flex items-center justify-center group-hover:bg-opacity-30 transition-all">
+          <i class="fas fa-external-link-alt text-white"></i>
+        </div>
+      </a>
+      
+      <!-- Discord -->
+      <a href="https://discord.gg/hS7dXYuYAZ" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
+        <div class="flex items-center">
+          <div>
+            <h3 class="text-white font-semibold text-lg">Discord</h3>
+            <p class="text-gray-300 text-sm">Community Chat</p>
+          </div>
+        </div>
+        <div class="bg-white bg-opacity-20 rounded-full w-10 h-10 flex items-center justify-center group-hover:bg-opacity-30 transition-all">
+          <i class="fas fa-external-link-alt text-white"></i>
+        </div>
+      </a>
+      
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@icebook6" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
+        <div class="flex items-center">
+          <div>
+            <h3 class="text-white font-semibold text-lg">TikTok</h3>
+            <p class="text-gray-300 text-sm">Gaming Clips</p>
+          </div>
+        </div>
+        <div class="bg-white bg-opacity-20 rounded-full w-10 h-10 flex items-center justify-center group-hover:bg-opacity-30 transition-all">
+          <i class="fas fa-external-link-alt text-white"></i>
+        </div>
+      </a>
+      
+      <!-- OnlyFans -->
+      <a href="https://only-fans.uk/icebook" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
+        <div class="flex items-center">
+          <div>
+            <h3 class="text-white font-semibold text-lg">OnlyFans</h3>
+            <p class="text-gray-300 text-sm">Exclusive Content</p>
+          </div>
+        </div>
+        <div class="bg-white bg-opacity-20 rounded-full w-10 h-10 flex items-center justify-center group-hover:bg-opacity-30 transition-all">
+          <i class="fas fa-external-link-alt text-white"></i>
+        </div>
+      </a>
     </div>
-    <div class="bg-white bg-opacity-20 rounded-full w-10 h-10 flex items-center justify-center group-hover:bg-opacity-30 transition-all">
-      <i class="fas fa-external-link-alt text-white"></i>
-    </div>
-  </a>
-  
-  <!-- Discord -->
-  <a href="https://discord.gg/hS7dXYuYAZ" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
-    <div class="flex items-center">
-      <div>
-        <h3 class="text-white font-semibold text-lg">Discord</h3>
-        <p class="text-gray-300 text-sm">Community Chat</p>
-      </div>
-    </div>
-    <div class="bg-white bg-opacity-20 rounded-full w-10 h-10 flex items-center justify-center group-hover:bg-opacity-30 transition-all">
-      <i class="fas fa-external-link-alt text-white"></i>
-    </div>
-  </a>
-  
-  <!-- TikTok -->
-  <a href="https://www.tiktok.com/@icebook6" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
-    <div class="flex items-center">
-      <div>
-        <h3 class="text-white font-semibold text-lg">TikTok</h3>
-        <p class="text-gray-300 text-sm">Gaming Clips</p>
-      </div>
-    </div>
-    <div class="bg-white bg-opacity-20 rounded-full w-10 h-10 flex items-center justify-center group-hover:bg-opacity-30 transition-all">
-      <i class="fas fa-external-link-alt text-white"></i>
-    </div>
-  </a>
-  
-  <!-- OnlyFans -->
-  <a href="https://only-fans.uk/icebook" class="btn-glow glass-card rounded-2xl p-6 flex items-center justify-between group transform transition-all duration-300">
-    <div class="flex items-center">
-      <div>
-        <h3 class="text-white font-semibold text-lg">OnlyFans</h3>
-        <p class="text-gray-300 text-sm">Exclusive Content</p>
-      </div>
-    </div>
-    <div class="bg-white bg-opacity-20 rounded-full w-10 h-10 flex items-center justify-center group-hover:bg-opacity-30 transition-all">
-      <i class="fas fa-external-link-alt text-white"></i>
-    </div>
-  </a>
-</div>
-```
-
   </div>
-
+  
   <!-- Partner Section -->
-
   <section class="relative py-20 bg-gray-900 overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.2) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.2) 0%, transparent 50%);"></div>
     </div>
-
-```
-<div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div class="text-center mb-16">
-    <h2 class="text-4xl md:text-5xl font-black text-white mb-4 text-glow">Partner & Sponsoren</h2>
-    <div class="w-24 h-1 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 mx-auto rounded-full"></div>
-  </div>
-  
-  <div class="flex justify-center">
-    <div class="w-full max-w-md">
-      <a href="https://otp.cx" class="partner-card rounded-3xl p-8 block group">
-        <div class="flex flex-col items-center text-center">
-          <div class="bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl p-4 mb-6 group-hover:scale-110 transition-transform duration-300">
-            <i class="fas fa-link text-white text-3xl"></i>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-            OnThePixel.net
-          </h3>
-          <p class="text-gray-300 text-center leading-relaxed mb-6">
-            Offizieller Partner für Gaming-Events und Community-Aktivitäten
-          </p>
-          <div class="flex items-center text-cyan-400 font-medium group-hover:text-white transition-colors">
-            <span>Partner Website besuchen</span>
-            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform"></i>
-          </div>
+    
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-4 text-glow">Partner & Sponsoren</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 mx-auto rounded-full"></div>
+      </div>
+      
+      <div class="flex justify-center">
+        <div class="w-full max-w-md">
+          <a href="https://otp.cx" class="partner-card rounded-3xl p-8 block group">
+            <div class="flex flex-col items-center text-center">
+              <div class="bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl p-4 mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-link text-white text-3xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                OnThePixel.net
+              </h3>
+              <p class="text-gray-300 text-center leading-relaxed mb-6">
+                Offizieller Partner für Gaming-Events und Community-Aktivitäten
+              </p>
+              <div class="flex items-center text-cyan-400 font-medium group-hover:text-white transition-colors">
+                <span>Partner Website besuchen</span>
+                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform"></i>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
+      </div>
     </div>
-  </div>
-</div>
-```
-
   </section>
-
+  
   <!-- Footer -->
-
   <footer class="bg-black py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row justify-between items-center">
@@ -300,7 +287,6 @@ body {
   </footer>
 
   <!-- Back to Top Button -->
-
   <button id="backToTop" class="fixed bottom-8 right-8 glass rounded-full p-4 text-white opacity-0 invisible transform translate-y-10 transition-all duration-300 hover:scale-110 z-50">
     <i class="fas fa-arrow-up text-lg"></i>
   </button>
@@ -388,6 +374,5 @@ body {
     `;
     document.head.appendChild(style);
   </script>
-
 </body>
 </html>
