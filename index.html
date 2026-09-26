@@ -46,11 +46,11 @@
           a.href = `creator.html?name=${encodeURIComponent(c.Name)}`;
           a.className = 'glass-card rounded-2xl p-5 flex flex-col items-center gap-3';
           const img = document.createElement('img');
-          img.src = `https://mc-heads.net/avatar/${encodeURIComponent(c.Minecraft_username)}/96`;
+          img.src = `https://api.mcskin.me/head/${encodeURIComponent(c.Minecraft_username)}?size=96`;
           img.alt = c.Name;
+          img.onerror = () => { img.onerror = null; img.src += '&retry=1'; };
           img.className = 'w-20 h-20 rounded-xl';
           img.style.imageRendering = 'pixelated';
-          img.onerror = () => { img.onerror = null; img.src = 'https://mc-heads.net/avatar/MHF_Steve/96'; };
           const name = document.createElement('span');
           name.className = 'text-white font-semibold break-all text-center';
           name.textContent = c.Name;
