@@ -1,1 +1,67 @@
-leck eier
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creators | OnThePixel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .hero-bg {
+      background: linear-gradient(-45deg, #0f0f23, #1a1a2e, #16213e, #0f3460);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: all 0.3s ease;
+    }
+    .glass-card:hover { transform: translateY(-6px); background: rgba(255, 255, 255, 0.14); }
+  </style>
+</head>
+<body class="hero-bg min-h-screen px-4 py-16">
+  <h1 class="text-5xl md:text-6xl font-black text-white text-center mb-4">Creators</h1>
+  <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full mb-12"></div>
+
+  <div id="grid" class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5"></div>
+  <p id="status" class="text-gray-300 text-center">Lädt…</p>
+
+  <script>
+    const API_URL = 'https://onthepixel.net/api/creators';
+
+    fetch(API_URL)
+      .then(res => { if (!res.ok) throw new Error(res.status); return res.json(); })
+      .then(({ data = [] }) => {
+        const grid = document.getElementById('grid');
+        data.forEach(c => {
+          const a = document.createElement('a');
+          a.href = `creator.html?name=${encodeURIComponent(c.Name)}`;
+          a.className = 'glass-card rounded-2xl p-5 flex flex-col items-center gap-3';
+          const img = document.createElement('img');
+          img.src = `https://mc-heads.net/avatar/${encodeURIComponent(c.Minecraft_username)}/96`;
+          img.alt = c.Name;
+          img.className = 'w-20 h-20 rounded-xl';
+          img.style.imageRendering = 'pixelated';
+          img.onerror = () => { img.onerror = null; img.src = 'https://mc-heads.net/avatar/MHF_Steve/96'; };
+          const name = document.createElement('span');
+          name.className = 'text-white font-semibold break-all text-center';
+          name.textContent = c.Name;
+          a.append(img, name);
+          grid.appendChild(a);
+        });
+        document.getElementById('status').remove();
+      })
+      .catch(() => {
+        document.getElementById('status').textContent = 'Die Creator Daten konnten nicht geladen werden.';
+      });
+  </script>
+</body>
+</html>
