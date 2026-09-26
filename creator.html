@@ -57,7 +57,7 @@
 <body class="min-h-screen bg-gray-900">
   <div class="hero-bg relative min-h-screen flex flex-col items-center justify-center px-4 py-16">
     <div class="text-center mb-12">
-      <img id="avatar" src="" alt="" class="w-32 h-64 mx-auto mb-8 hidden drop-shadow-2xl" style="image-rendering: pixelated;">
+      <img id="avatar" src="" alt="" class="w-40 h-40 rounded-2xl mx-auto mb-8 hidden drop-shadow-2xl" style="image-rendering: pixelated;">
       <h1 id="name" class="text-5xl md:text-7xl font-black text-white mb-4 tracking-tight break-all">Lädt…</h1>
       <div class="w-32 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
     </div>
@@ -167,7 +167,7 @@
 
       if (c.Minecraft_username) {
         const img = document.getElementById('avatar');
-        img.src = `https://api.mcskin.me/body/${encodeURIComponent(c.Minecraft_username)}?size=128`;
+        img.src = `https://api.mcskin.me/pfp/${encodeURIComponent(c.Minecraft_username)}?size=256`;
         img.alt = c.Name;
         img.onerror = () => { img.onerror = null; img.src += '&retry=1'; };
         img.classList.remove('hidden');
